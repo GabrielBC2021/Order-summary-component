@@ -1,0 +1,173 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Primary Variables */
+:root {
+    /* Primary Colors */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    
+    /* Neutral Colors */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+
+    /* Font Family */
+    --Family: 'Red Hat Display', sans-serif;
+}
+
+/* Apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Body */
+body {
+    display: flex;
+    font-family: var(--Family);
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Scrollbar Hidden */
+
+    /* Wave */
+    background-image: url(/images/pattern-background-mobile.svg);
+    background-color: var(--Pale-blue);
+    background-repeat: repeat-x;
+}
+
+/* Container */
+.container {   
+    max-width: 30rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: .7rem;
+    box-shadow: 0px 5px 5px #000;
+}
+
+/* Card */
+.card {
+    text-align: center;
+    
+}
+
+/* Image */
+.image img {
+    min-width: 100%;
+    border-radius: .7rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* General */
+.general {
+    width: 100%;
+    padding: 2rem;
+}
+
+.text h2{
+    color: var(--Dark-blue);
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.text p{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--Desaturated-blue);
+    margin-bottom: 2rem;
+}
+
+/* Annual Plan */
+.annual-plan {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.flex h2 {
+    margin-bottom: 0;
+}
+
+.flex p {
+    color: var(--Desaturated-blue);
+}
+
+/* Change */
+.change {
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+
+/* Button */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin: 2rem 0 2rem 0;
+    border-radius: 1rem;
+    background-color: var(--Bright-blue);
+    color: white;
+    font-weight: 900;
+}
+
+/* Href */
+.cancel-order {
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--Desaturated-blue);
+}
+
+/* Hovers */
+.change:hover {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    background-color: rgb(118,108,241);
+    transition: all .5s ease;
+    cursor: pointer;
+}
+
+.cancel-order:hover {
+    color: var(--Dark-blue);
+    transition: all .5s ease;
+}
+
+/* Responsive */
+@media (min-width: 375px) {
+    .container {
+        display: block;
+        width: 100%;
+    }
+
+    .image img{
+        width: 100%;
+    }
+
+    body {
+        background-image: url(/images/pattern-background-desktop.svg);
+    }
+
+    .annual-plan {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+    }
+    
+}
